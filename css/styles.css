@@ -69,7 +69,9 @@ main section .filter-options{
 
 main section #restaurants-list{
 	grid-area: list;
-	
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 350px);
+	grid-auto-rows: auto;
 }
 
 footer{
