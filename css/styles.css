@@ -35,10 +35,48 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-#maincontent {
-  background-color: #f3f3f3;
-  min-height: 100%;
+
+#page{
+	display: grid;
+	grid-template-areas: 	
+		"header"
+		"main"
+		"footer";
+	/* width: 100%; */
+	grid-template-rows: repeat(auto, 3);
+	grid-template-columns: 1fr;
 }
+
+header nav{
+	grid-area: header;
+	display: grid;
+}
+
+main{
+	display: grid;
+	grid-area: main;
+	background-color: #f3f3f3;
+}
+
+main section #map{
+	grid-area: map;
+}
+
+main section .filter-options{
+	grid-area: options;
+	height: 100%;
+}
+
+main section #restaurants-list{
+	grid-area: list;
+	
+}
+
+footer{
+	grid-area: footer;
+	background-color: red;
+}
+
 #footer {
   background-color: #444;
   color: #aaa;
@@ -50,7 +88,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 /* ====================== Navigation ====================== */
 nav {
-  width: 100%;
+  /* width: 100%; */
   height: 80px;
   background-color: #252831;
   text-align:center;
@@ -100,12 +138,10 @@ nav h1 a {
 /* ====================== Map ====================== */
 #map {
   height: 400px;
-  width: 100%;
   background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  width: 100%;
   height: 50px;
   background-color: #3397DB;
   align-items: center;
@@ -196,6 +232,7 @@ nav h1 a {
   right: 0;
   top: 80px;
   width: 50%;
+  background-color: #0275d8;
 }
 .inside #map {
   background-color: #ccc;
@@ -258,7 +295,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
