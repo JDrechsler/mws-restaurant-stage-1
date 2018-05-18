@@ -219,6 +219,26 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
+.inside main{
+	grid-template-areas: 	
+		"map"
+		"restaurant"
+		"reviews";
+	grid-template-columns: 1fr;
+}
+
+.inside main #map{
+	grid-area: map;
+}
+
+.inside main #restaurant-container{
+	grid-area: restaurant;
+}
+
+.inside main #reviews-container{
+	grid-area: reviews;
+}
+
 
 #restaurant-name {
   color: #f18200;
