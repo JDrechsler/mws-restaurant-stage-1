@@ -43,6 +43,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 		"main"
 		"ft";
 	grid-template-columns: 1fr;
+	background-color: #f3f3f3;
 }
 
 header{
