@@ -319,6 +319,7 @@ nav h1 a {
 		grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 		grid-auto-rows: auto;
 		place-items: center;
+		align-items: stretch;
 	}	
 }
 
