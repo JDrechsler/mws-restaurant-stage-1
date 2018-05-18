@@ -209,7 +209,7 @@ nav h1 a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
-  display: inline-block;
+  display: block;
   font-size: 10pt;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
