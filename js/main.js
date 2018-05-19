@@ -146,6 +146,7 @@ createRestaurantHTML = (restaurant) => {
 
 	const name = document.createElement('h1');
 	name.innerHTML = restaurant.name;
+	name.tabIndex = '0'
 	li.append(name);
 
 	const neighborhood = document.createElement('p');
@@ -175,5 +176,9 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 			window.location.href = marker.url
 		});
 		self.markers.push(marker);
+	});
+
+	google.maps.event.addListener(map, 'tilesloaded', function (evt) {
+		// todo: remove markers from tabindex
 	});
 }
