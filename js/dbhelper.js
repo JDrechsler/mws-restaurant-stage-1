@@ -150,7 +150,11 @@ class DBHelper {
 	 * Restaurant image URL.
 	 */
 	static imageUrlForRestaurant(restaurant) {
-		return (`/img/${restaurant.photograph}`);
+		if (restaurant.photograph.startsWith('http')) {
+			return restaurant.photograph
+		} else {
+			return (`/img/${restaurant.photograph}`);
+		}
 	}
 
 	/**
