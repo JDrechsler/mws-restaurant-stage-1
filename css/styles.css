@@ -217,8 +217,9 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
-.inside main #map-container{
+.inside main #map{
 	grid-area: details-map-container;
+	margin-top: 10px;
 }
 
 .inside main{
@@ -229,8 +230,6 @@ nav h1 a {
 		"reviews";
 	grid-template-columns: 1fr;
 }
-
-
 
 #restaurant-container{
 	grid-area: restaurant;
@@ -352,7 +351,8 @@ nav h1 a {
 		grid-template-areas: 
 			"name name"
 			"img-cuisine hours"
-			"address address";
+			"address address"
+			"details-map-container details-map-container";
 		grid-template-columns: 1fr 1fr;
 		grid-column-gap: 10px;
 	}
@@ -366,13 +366,16 @@ nav h1 a {
 
 	.inside main{
 		grid-template-areas: 	
-			"restaurant reviews"
-			"details-map-container details-map-container";
+			"restaurant reviews";
 		grid-template-columns: 3fr 4fr;
 	}
 
 	#restaurant-container{
 		display: block;
+	}
+
+	.inside #map{
+		max-width: 400px;
 	}
 }
 
