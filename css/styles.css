@@ -217,25 +217,24 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 
+.inside main #map-container{
+	grid-area: details-map-container;
+}
+
 .inside main{
 	background-color: #f3f3f3;
 	grid-template-areas: 	
-		"map"
+		"details-map-container"
 		"restaurant"
 		"reviews";
 	grid-template-columns: 1fr;
 }
 
-.inside main #map{
-	grid-area: map;
-}
+
 
 #restaurant-container{
 	grid-area: restaurant;
 }
-
-
-
 
 #restaurant-name {
   color: #f18200;
@@ -251,6 +250,7 @@ nav h1 a {
 #restaurant-img {
 	width: 100%;
 	grid-area: img;
+	max-width: 500px;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -269,6 +269,7 @@ nav h1 a {
 	text-transform: uppercase;
 	width: 100%;
 	grid-area: cuisine;
+	max-width: 500px;
 }
 
 #restaurant-hours{
@@ -357,6 +358,19 @@ nav h1 a {
 
 	#restaurant-img{
 		margin-bottom: 5px;
+	}
+}
+
+@media screen and (min-width:1000px){
+	.inside main{
+		grid-template-areas: 	
+			"details-map-container details-map-container"
+			"restaurant reviews";
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#restaurant-container{
+		display: block;
 	}
 }
 
