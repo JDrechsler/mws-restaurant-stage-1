@@ -367,7 +367,7 @@ nav h1 a {
 	.inside main{
 		grid-template-areas: 	
 			"restaurant reviews";
-		grid-template-columns: 3fr 4fr;
+		grid-template-columns: 1fr 2fr;
 	}
 
 	#restaurant-container{
@@ -376,12 +376,6 @@ nav h1 a {
 
 	.inside #map{
 		max-width: 400px;
-	}
-}
-
-@media screen and (min-width:1250px){
-	.inside main{
-		grid-template-columns: 1fr 2fr;
 	}
 }
 
