@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 /**
  * Fetch all neighborhoods and set their HTML.
  */
-fetchNeighborhoods = () => {
-	DBHelper.fetchNeighborhoods((error, neighborhoods) => {
-		if (error) { // Got an error
-			console.error(error);
-		} else {
-			self.neighborhoods = neighborhoods;
-			fillNeighborhoodsHTML();
-		}
-	});
+fetchNeighborhoods = async () => {
+	try {
+		const neighborhoods = await DBHelper.fetchNeighborhoods()
+		self.neighborhoods = neighborhoods;
+		fillNeighborhoodsHTML();
+	} catch (error) {
+		console.error(error);
+		throw error
+	}
 }
 
 /**
@@ -42,15 +42,14 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
 /**
  * Fetch all cuisines and set their HTML.
  */
-fetchCuisines = () => {
-	DBHelper.fetchCuisines((error, cuisines) => {
-		if (error) { // Got an error!
-			console.error(error);
-		} else {
-			self.cuisines = cuisines;
-			fillCuisinesHTML();
-		}
-	});
+fetchCuisines = async () => {
+	try {
+		const cuisines = await DBHelper.fetchCuisines()
+		self.cuisines = cuisines;
+		fillCuisinesHTML();
+	} catch (error) {
+		console.error(error);
+	}
 }
 
 /**
@@ -86,7 +85,7 @@ window.initMap = () => {
 /**
  * Update page and map for current restaurants.
  */
-updateRestaurants = () => {
+updateRestaurants = async () => {
 	const cSelect = document.getElementById('cuisines-select');
 	const nSelect = document.getElementById('neighborhoods-select');
 
@@ -96,14 +95,15 @@ updateRestaurants = () => {
 	const cuisine = cSelect[cIndex].value;
 	const neighborhood = nSelect[nIndex].value;
 
-	DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
-		if (error) { // Got an error!
-			console.error(error);
-		} else {
-			resetRestaurants(restaurants);
-			fillRestaurantsHTML();
-		}
-	})
+	try {
+		const restaurantsByCuisineAndNeighborhood = await DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood)
+		resetRestaurants(restaurantsByCuisineAndNeighborhood);
+		fillRestaurantsHTML();
+	} catch (error) {
+		console.error(error);
+	}
+
+
 }
 
 /**
