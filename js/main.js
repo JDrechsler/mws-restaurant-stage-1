@@ -4,6 +4,8 @@ let restaurants,
 var map
 var markers = []
 
+// todo: images even smaller, updatecount right when page loaded
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -12,10 +14,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	fetchCuisines();
 	document.getElementById('start').focus()
 
+	document.getElementById('neighborhoods-select').addEventListener('change', event => {
+		updateResultsCount();
+	})
 
-
-
+	document.getElementById('cuisines-select').addEventListener('change', event => {
+		updateResultsCount();
+	})
 });
+
+updateResultsCount = () => {
+	const resultsList = document.getElementById('restaurants-list');
+	const numResults = resultsList.children.length;
+	const spanCountElement = document.getElementsByClassName('results-count')[0];
+	if (numResults < 1) {
+		spanCountElement.textContent = '(No results found)';
+	}
+	else if (numResults === 1) {
+		spanCountElement.textContent = '(1 result found)';
+	}
+	else {
+		spanCountElement.textContent = `(${numResults} results found)`;
+	}
+}
+
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -175,7 +197,7 @@ createRestaurantHTML = (restaurant) => {
 	const more = document.createElement('a');
 	more.innerHTML = 'View Details';
 	more.href = DBHelper.urlForRestaurant(restaurant);
-	li.append(more)
+	li.append(more);
 
 	return li
 }
