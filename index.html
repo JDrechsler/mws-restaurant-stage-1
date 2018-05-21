@@ -17,23 +17,24 @@
 		<header>
 			<nav>
 				<h1>
-					<a href="./">Restaurant Reviews</a>
-				</h1>
+					<a href="./" tabindex="0" id="start">Restaurant Reviews</a>
+				</h1>	
 			</nav>
 		</header>
 
 		<main id="maincontent" >
-			<section id="map-container" tabindex="-1">
-				<div id="map" tabindex="-1"></div>
+			<a href="#filter" class="skip-link" aria-label="Skip embedded Google Maps and go to the filter options">Skip maps, go to filter options</a> 
+			<section id="map-container">
+				<div id="map"></div>
 			</section>
-			<section>
+			<section id="filter" >
 				<div class="filter-options">
 					<h2>Filter Results</h2>
-					<select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-						<option value="all">All Neighborhoods</option>
+					<select id="neighborhoods-select" role="listbox" aria-haspopup="listbox" name="neighborhoods" onchange="updateRestaurants()">
+						<option role="option" value="all">All Neighborhoods</option>
 					</select>
 					<select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-						<option value="all">All Cuisines</option>
+						<option role="option" value="all">All Cuisines</option>
 					</select>
 				</div>
 				<ul id="restaurants-list"></ul>

@@ -10,6 +10,7 @@ var markers = []
 document.addEventListener('DOMContentLoaded', (event) => {
 	fetchNeighborhoods();
 	fetchCuisines();
+	document.getElementById('start').focus()
 });
 
 /**
@@ -102,8 +103,6 @@ updateRestaurants = async () => {
 	} catch (error) {
 		console.error(error);
 	}
-
-
 }
 
 /**
@@ -177,8 +176,5 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 		});
 		self.markers.push(marker);
 	});
-
-	google.maps.event.addListener(map, 'tilesloaded', function (evt) {
-		// todo: remove markers from tabindex
-	});
 }
+
