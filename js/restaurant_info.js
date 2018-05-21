@@ -1,11 +1,6 @@
 let restaurant;
 var map;
 
-document.addEventListener('DOMContentLoaded', (event) => {
-	document.getElementById('restaurant-name').focus()
-});
-
-
 /**
  * Initialize Google map, called from HTML.
  */
