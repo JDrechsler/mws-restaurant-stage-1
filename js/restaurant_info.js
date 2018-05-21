@@ -1,6 +1,11 @@
 let restaurant;
 var map;
 
+document.addEventListener('DOMContentLoaded', (event) => {
+	document.getElementById('restaurant-name').focus()
+});
+
+
 /**
  * Initialize Google map, called from HTML.
  */
@@ -59,9 +64,11 @@ fetchRestaurantFromURL = async () => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
 	const name = document.getElementById('restaurant-name');
+	name.setAttribute('aria-label', `Restaurant: ${restaurant.name}`);
 	name.innerHTML = restaurant.name;
 
 	const address = document.getElementById('restaurant-address');
+	address.setAttribute('aria-label', `Address: ${restaurant.address}`);
 	address.innerHTML = restaurant.address;
 
 	const image = document.getElementById('restaurant-img');
@@ -70,6 +77,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 	image.alt = DBHelper.imageAltForRestaurant(restaurant);
 
 	const cuisine = document.getElementById('restaurant-cuisine');
+	cuisine.setAttribute('aria-label', `Cuisine: ${restaurant.cuisine_type}`);
 	cuisine.innerHTML = restaurant.cuisine_type;
 
 	// fill operating hours

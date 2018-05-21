@@ -12,7 +12,6 @@ var markers = []
 document.addEventListener('DOMContentLoaded', (event) => {
 	fetchNeighborhoods();
 	fetchCuisines();
-	document.getElementById('start').focus()
 });
 
 /**
