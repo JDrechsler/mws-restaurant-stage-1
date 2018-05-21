@@ -13,31 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	fetchNeighborhoods();
 	fetchCuisines();
 	document.getElementById('start').focus()
-
-	document.getElementById('neighborhoods-select').addEventListener('change', event => {
-		updateResultsCount();
-	})
-
-	document.getElementById('cuisines-select').addEventListener('change', event => {
-		updateResultsCount();
-	})
 });
-
-updateResultsCount = () => {
-	const resultsList = document.getElementById('restaurants-list');
-	const numResults = resultsList.children.length;
-	const spanCountElement = document.getElementsByClassName('results-count')[0];
-	if (numResults < 1) {
-		spanCountElement.textContent = '(No results found)';
-	}
-	else if (numResults === 1) {
-		spanCountElement.textContent = '(1 result found)';
-	}
-	else {
-		spanCountElement.textContent = `(${numResults} results found)`;
-	}
-}
-
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -138,8 +114,28 @@ updateRestaurants = async () => {
 		const restaurantsByCuisineAndNeighborhood = await DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood)
 		resetRestaurants(restaurantsByCuisineAndNeighborhood);
 		fillRestaurantsHTML();
+		updateResultsCount()
+
 	} catch (error) {
 		console.error(error);
+	}
+}
+
+/**
+ * Update results with aria-live
+ */
+updateResultsCount = () => {
+	const resultsList = document.getElementById('restaurants-list');
+	const numResults = resultsList.children.length;
+	const spanCountElement = document.getElementsByClassName('results-count')[0];
+	if (numResults < 1) {
+		spanCountElement.textContent = '(No results found)';
+	}
+	else if (numResults === 1) {
+		spanCountElement.textContent = '(1 result found)';
+	}
+	else {
+		spanCountElement.textContent = `(${numResults} results found)`;
 	}
 }
 
