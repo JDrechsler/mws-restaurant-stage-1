@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	fetchNeighborhoods();
 	fetchCuisines();
 	document.getElementById('start').focus()
+
+
+
+
 });
 
 /**
@@ -81,6 +85,18 @@ window.initMap = () => {
 		scrollwheel: false
 	});
 	updateRestaurants();
+
+	google.maps.event.addListener(map, 'tilesloaded', function (evt) {
+
+		const mapDivs = document.querySelectorAll('#map [tabindex="0"]')
+
+		mapDivs.forEach(m => {
+			m.setAttribute('tabindex', "-1")
+		})
+
+		//a11y
+		document.querySelector('#map > div > div > iframe').title = 'Embedded Google Maps Iframe'
+	});
 }
 
 /**
@@ -177,4 +193,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 		self.markers.push(marker);
 	});
 }
+
+
 

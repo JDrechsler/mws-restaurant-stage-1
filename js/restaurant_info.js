@@ -17,6 +17,18 @@ window.initMap = async () => {
 	} catch (error) {
 		console.error(error);
 	}
+
+	google.maps.event.addListener(map, 'tilesloaded', function (evt) {
+
+		const mapDivs = document.querySelectorAll('#map [tabindex="0"]')
+
+		mapDivs.forEach(m => {
+			m.setAttribute('tabindex', "-1")
+		})
+
+		//a11y
+		document.querySelector('#map > div > div > iframe').title = 'Embedded Google Maps Iframe'
+	});
 }
 
 /**
@@ -73,8 +85,13 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
  */
 fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => {
 	const hours = document.getElementById('restaurant-hours');
+	const caption = document.createElement('caption');
+	caption.setAttribute('aria-label', 'Restaurant hours')
+	hours.appendChild(caption);
+
 	for (let key in operatingHours) {
 		const row = document.createElement('tr');
+		// row.setAttribute('tabindex', '0');
 
 		const day = document.createElement('td');
 		day.innerHTML = key;
