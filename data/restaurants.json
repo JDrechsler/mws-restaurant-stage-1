@@ -4,7 +4,7 @@
 			"id": 1,
 			"name": "Mission Chinese Food",
 			"neighborhood": "Manhattan",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Mission%20Chinese%20Food.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Mission%20Chinese%20Food.jpg",
 			"imgAlt": "People sitting in the restaurant called Mission Chinese Food",
 			"address": "171 E Broadway, New York, NY 10002",
 			"latlng": {
@@ -46,7 +46,7 @@
 			"id": 2,
 			"name": "Emily",
 			"neighborhood": "Brooklyn",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Emily.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Emily.jpg",
 			"imgAlt": "Yummy looking pizza",
 			"address": "919 Fulton St, Brooklyn, NY 11238",
 			"latlng": {
@@ -88,7 +88,7 @@
 			"id": 3,
 			"name": "Kang Ho Dong Baekjeong",
 			"neighborhood": "Manhattan",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Kang%20Ho%20Dong%20Baekjeong.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Kang%20Ho%20Dong%20Baekjeong.jpg",
 			"imgAlt": "Wood tables in a modern looking restaurant",
 			"address": "1 E 32nd St, New York, NY 10016",
 			"latlng": {
@@ -130,7 +130,7 @@
 			"id": 4,
 			"name": "Katz's Delicatessen",
 			"neighborhood": "Manhattan",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757107/MWS%20Project%201%20-%20Restaurant%20Reviews/Katz's%20Delicatessen.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757107/MWS%20Project%201%20-%20Restaurant%20Reviews/Katz's%20Delicatessen.jpg",
 			"imgAlt": "Katz's Delicatessen view from outside in the dark night. It is bright and pretty.",
 			"address": "205 E Houston St, New York, NY 10002",
 			"latlng": {
@@ -172,7 +172,7 @@
 			"id": 5,
 			"name": "Roberta's Pizza",
 			"neighborhood": "Brooklyn",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Roberta's%20Pizza.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Roberta's%20Pizza.jpg",
 			"imgAlt": "Roberta's Pizza place from the inside.",
 			"address": "261 Moore St, Brooklyn, NY 11206",
 			"latlng": {
@@ -214,7 +214,7 @@
 			"id": 6,
 			"name": "Hometown BBQ",
 			"neighborhood": "Brooklyn",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Hometown%20BBQ.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Hometown%20BBQ.jpg",
 			"imgAlt": "A lot of people are sitting and eating in the restaurant Hometown BBQ",
 			"address": "454 Van Brunt St, Brooklyn, NY 11231",
 			"latlng": {
@@ -256,7 +256,7 @@
 			"id": 7,
 			"name": "Superiority Burger",
 			"neighborhood": "Manhattan",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757109/MWS%20Project%201%20-%20Restaurant%20Reviews/Superiority%20Burger.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757109/MWS%20Project%201%20-%20Restaurant%20Reviews/Superiority%20Burger.jpg",
 			"imgAlt": "A black and white historical looking picture of a burger place.",
 			"address": "430 E 9th St, New York, NY 10009",
 			"latlng": {
@@ -298,7 +298,7 @@
 			"id": 8,
 			"name": "The Dutch",
 			"neighborhood": "Manhattan",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/The%20Dutch.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/The%20Dutch.jpg",
 			"imgAlt": "Outside view of the dutch shop",
 			"address": "131 Sullivan St, New York, NY 10012",
 			"latlng": {
@@ -340,7 +340,7 @@
 			"id": 9,
 			"name": "Mu Ramen",
 			"neighborhood": "Queens",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Mu%20Ramen.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Mu%20Ramen.jpg",
 			"imgAlt": "A place for noodle lovers. All you can eat ramen like the name of the restaurant suggests.",
 			"address": "1209 Jackson Ave, Queens, NY 11101",
 			"latlng": {
@@ -382,7 +382,7 @@
 			"id": 10,
 			"name": "Casa Enrique",
 			"neighborhood": "Queens",
-			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Casa%20Enrique.jpg",
+			"photograph": "https://res.cloudinary.com/jdrechsler/image/upload/c_scale,w_400,f_auto/v1526757108/MWS%20Project%201%20-%20Restaurant%20Reviews/Casa%20Enrique.jpg",
 			"imgAlt": "An empty but very modern looking restaurant with a lot of white decorations.",
 			"address": "5-48 49th Ave, Queens, NY 11101",
 			"latlng": {

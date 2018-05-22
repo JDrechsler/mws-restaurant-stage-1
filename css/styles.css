@@ -97,12 +97,11 @@ main section #map{
 }
 
 main section .filter-options{
-	padding: 20px;
 	grid-area: options;
 	display: grid;
 	place-items:center;
 	height: auto;
-	padding-bottom: 0;
+	padding: 10px 0 0 0;
 }
 
 footer{
