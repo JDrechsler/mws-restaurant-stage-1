@@ -26,7 +26,7 @@ window.initMap = async () => {
 			m.setAttribute('tabindex', "-1")
 		})
 
-		//a11y
+		//a11y in order to receive 100% in accessibility in chrome dev tools
 		document.querySelector('#map > div > div > iframe').title = 'Embedded Google Maps Iframe'
 	});
 }
@@ -104,8 +104,6 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 
 	for (let key in operatingHours) {
 		const row = document.createElement('tr');
-		// row.setAttribute('tabindex', '0');
-
 		const day = document.createElement('td');
 		day.innerHTML = key;
 		row.appendChild(day);

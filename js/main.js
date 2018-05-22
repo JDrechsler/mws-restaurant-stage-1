@@ -27,7 +27,6 @@ fetchNeighborhoods = async () => {
 		fillNeighborhoodsHTML();
 	} catch (error) {
 		console.error(error);
-		throw error
 	}
 }
 
@@ -41,7 +40,6 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
 		option.innerHTML = neighborhood;
 		option.value = neighborhood;
 		select.appendChild(option);
-		// select.append(option);
 	});
 }
 
@@ -69,7 +67,6 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
 		option.innerHTML = cuisine;
 		option.value = cuisine;
 		select.appendChild(option);
-		// select.append(option);
 	});
 }
 
@@ -96,7 +93,7 @@ window.initMap = () => {
 			m.setAttribute('tabindex', "-1")
 		})
 
-		//a11y
+		//a11y in order to receive 100% in accessibility in chrome dev tools
 		document.querySelector('#map > div > div > iframe').title = 'Embedded Google Maps Iframe'
 	});
 }
