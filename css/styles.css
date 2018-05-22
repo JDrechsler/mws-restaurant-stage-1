@@ -99,9 +99,10 @@ main section #map{
 main section .filter-options{
 	padding: 20px;
 	grid-area: options;
-	height: 100%;
 	display: grid;
 	place-items:center;
+	height: auto;
+	padding-bottom: 0;
 }
 
 footer{
