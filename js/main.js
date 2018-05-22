@@ -4,7 +4,10 @@ let restaurants,
 var map
 var markers = []
 
-// todo: service worker, offline picture for maps when offline, check formatting...semicolon etc.
+// todo: service worker, 
+// offline picture for maps when offline
+// check formatting...semicolon etc.
+// structure css with comments
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
