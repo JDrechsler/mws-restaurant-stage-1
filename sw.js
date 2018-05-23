@@ -52,6 +52,8 @@ self.addEventListener('activate', event => {
 	console.log('SW: Activate Event')
 })
 
-self.addEventListener('fetch', event =>
-	event.respondWith(useRessourceStrategy(event.request))
-)
+self.addEventListener('fetch', event => {
+	if (event.request.url.startsWith(self.location.origin)) {
+		event.respondWith(useRessourceStrategy(event.request))
+	}
+})

@@ -190,7 +190,7 @@ createRestaurantHTML = (restaurant) => {
 	/**@type {string} */
 	const imgSrc = DBHelper.imageUrlForRestaurant(restaurant);
 
-	const imgSrc200 = imgSrc.replace('w_400', 'w_200')
+	const imgSrc200 = imgSrc.replace('_400', '_200')
 	const imgSrc400 = imgSrc
 
 	image.srcset = `${imgSrc200} 200w, ${imgSrc400} 400w`
