@@ -1,7 +1,7 @@
 const staticCache = 'mws-p1-static-cache-1'
 const dynamicCache = 'mws-p1-dynamic-cache-1'
 const staticUrlsToCache = [
-	'/',
+	'./',
 	'index.html',
 	'css/styles.css',
 	'js/main.js',
