@@ -7,7 +7,6 @@ var markers = []
 // todo: service worker, 
 // offline picture for maps when offline
 // check formatting...semicolon etc.
-// structure css with comments
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -15,7 +14,21 @@ var markers = []
 document.addEventListener('DOMContentLoaded', (event) => {
 	fetchNeighborhoods();
 	fetchCuisines();
+	registerServiceWorker();
 });
+
+registerServiceWorker = () => {
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', async () => {
+			try {
+				const reg = await navigator.serviceWorker.register('/sw.js')
+				console.log('Registration successful. Scope is ' + reg.scope);
+			} catch (error) {
+				console.log('Registration failed.', error);
+			}
+		})
+	}
+}
 
 /**
  * Fetch all neighborhoods and set their HTML.
