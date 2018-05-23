@@ -32,7 +32,6 @@ const useRessourceStrategy = async request => {
     } else {
       //if not in cache try to fetch using internet
       const fetchResponse = await fetch(request);
-      console.log(fetchResponse.status);
       //if response 404 (does not exist)
       if (fetchResponse.status === 404) {
         // use offline fallback page
