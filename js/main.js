@@ -21,7 +21,7 @@ registerServiceWorker = () => {
 	if ('serviceWorker' in navigator) {
 		window.addEventListener('load', async () => {
 			try {
-				const reg = await navigator.serviceWorker.register('/sw.js')
+				const reg = await navigator.serviceWorker.register('sw.js')
 				console.log('Registration successful. Scope is ' + reg.scope);
 			} catch (error) {
 				console.log('Registration failed.', error);
