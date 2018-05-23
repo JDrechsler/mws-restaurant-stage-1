@@ -48,6 +48,7 @@ a.skip-link {
   font-weight: 200;
 }
 
+/* Skip link idea from here: https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/ */
 a.skip-link:focus,
 a.skip-link:active {
   color: #fff;
