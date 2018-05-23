@@ -3,41 +3,57 @@ const dynamicCache = "mws-p1-dynamic-cache-1";
 const staticUrlsToCache = [
   "./",
   "index.html",
-  "restaurant.html",
   "css/styles.css",
   "js/main.js",
   "js/dbhelper.js",
-  "data/restaurants.json"
+  "js/mapsApi.js",
+  "data/restaurants.json",
+  "404.html",
+  "offline.html",
+  "restaurant.html"
 ];
 
 const cacheStaticRessources = async () => {
   const cache = await caches.open(staticCache);
-  await cache.addAll(staticUrlsToCache);
-  console.log("cached static ressources");
+  try {
+    await cache.addAll(staticUrlsToCache);
+    console.log("cached static ressources");
+  } catch (error) {
+    console.log(`An error happened during static assets caching: ${error}`);
+  }
 };
 
 const useRessourceStrategy = async request => {
   try {
     const response = await caches.match(request);
     if (response) {
+      //if in cache use cache
       return response;
     } else {
-      if (request.url.endsWith(".jpg")) {
-        addRessourceToDynamicCache(request);
+      //if not in cache try to fetch using internet
+      const fetchResponse = await fetch(request);
+      console.log(fetchResponse.status);
+      //if response 404 (does not exist)
+      if (fetchResponse.status === 404) {
+        // use offline fallback page
+        const fallbackPage = await caches.match("404.html");
+        return fallbackPage;
+      } else {
+        addRessourceToDynamicCache(request, fetchResponse.clone());
+        return fetchResponse;
       }
-      return fetch(request);
     }
   } catch (error) {
     console.log(error);
-    return fetch(request);
+    const offlinePage = await caches.match("offline.html");
+    return offlinePage;
   }
 };
 
-const addRessourceToDynamicCache = async url => {
+const addRessourceToDynamicCache = async (request, res) => {
   try {
     const dynCache = await caches.open(dynamicCache);
-    const res = await fetch(url);
-    dynCache.put(url, res);
+    dynCache.put(request, res);
   } catch (error) {
     console.log(error);
   }
@@ -53,5 +69,7 @@ self.addEventListener("activate", event => {
 });
 
 self.addEventListener("fetch", event => {
-  event.respondWith(useRessourceStrategy(event.request));
+  if (event.request.url.startsWith(self.location.origin)) {
+    event.respondWith(useRessourceStrategy(event.request));
+  }
 });
