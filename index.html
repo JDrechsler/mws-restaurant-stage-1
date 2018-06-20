@@ -4,6 +4,7 @@
 <head>
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
 	<!-- Source: http://www.iconarchive.com -->
 	<link rel="shortcut icon" href="./assets/restaurant.ico" type="image/x-icon">
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -18,12 +19,12 @@
 			<nav role="navigation">
 				<h1>
 					<a href="./" tabindex="0" id="start">Restaurant Reviews</a>
-				</h1>	
+				</h1>
 			</nav>
 		</header>
 
 		<main id="maincontent" role="main">
-			<a href="#filter" tabindex="0" class="skip-link" aria-label="Skip embedded Google Maps and go to the filter options">Skip maps, go to filter options</a> 
+			<a href="#filter" tabindex="0" class="skip-link" aria-label="Skip embedded Google Maps and go to the filter options">Skip maps, go to filter options</a>
 			<section id="map-container">
 				<div id="map"></div>
 			</section>
@@ -50,9 +51,9 @@
 
 	</div>
 
+	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 	<script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
 	<script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-	<script async defer src="js/mapsApi.js"></script>
 
 </body>
 
