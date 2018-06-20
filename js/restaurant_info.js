@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', event => {
 });
 
 initMap = async () => {
-	const restaurant = await fetchRestaurantFromURL();
+	const restaurant =  await fetchRestaurantFromURL();
 
 	self.newMap = L.map('map', {
 		center: [restaurant.latlng.lat, restaurant.latlng.lng],
