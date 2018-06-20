@@ -8,36 +8,6 @@ document.addEventListener('DOMContentLoaded', event => {
 	initMap();
 });
 
-/**
- * Initialize Google map, called from HTML.
- */
-// window.initMap = async () => {
-// 	try {
-// 		const restaurant = await fetchRestaurantFromURL();
-// 		self.map = new google.maps.Map(document.getElementById('map'), {
-// 			zoom: 16,
-// 			center: restaurant.latlng,
-// 			scrollwheel: false
-// 		});
-// 		fillBreadcrumb();
-// 		DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-// 	} catch (error) {
-// 		console.error(error);
-// 	}
-
-// 	google.maps.event.addListener(map, 'tilesloaded', function(evt) {
-// 		const mapDivs = document.querySelectorAll('#map [tabindex="0"]');
-
-// 		mapDivs.forEach(m => {
-// 			m.setAttribute('tabindex', '-1');
-// 		});
-
-// 		//a11y in order to receive 100% in accessibility in chrome dev tools
-// 		document.querySelector('#map > div > div > iframe').title =
-// 			'Embedded Google Maps Iframe';
-// 	});
-// };
-
 initMap = async () => {
 	const restaurant = await fetchRestaurantFromURL();
 
