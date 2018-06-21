@@ -34,6 +34,11 @@ a img {
   border: none 0px #fff;
 }
 
+/* Accessibility: darker color */
+.leaflet-container a {
+  color: #005577 !important;
+}
+
 a.skip-link {
   left: -999px;
   position: absolute;
@@ -95,9 +100,9 @@ section {
 #page {
   display: grid;
   grid-template-areas:
-    "hd"
-    "main"
-    "ft";
+    'hd'
+    'main'
+    'ft';
   grid-template-columns: 1fr;
 }
 
@@ -164,7 +169,7 @@ nav h1 a {
 #breadcrumb li + li:before {
   padding: 8px;
   color: black;
-  content: "/\00a0";
+  content: '/\00a0';
 }
 
 /* Add a color to all links inside the list */
@@ -276,9 +281,9 @@ nav h1 a {
 .inside main {
   background-color: #f3f3f3;
   grid-template-areas:
-    "restaurant"
-    "details-map-container"
-    "reviews";
+    'restaurant'
+    'details-map-container'
+    'reviews';
   grid-template-columns: 1fr;
 }
 
@@ -412,10 +417,10 @@ nav h1 a {
   #restaurant-container {
     display: grid;
     grid-template-areas:
-      "name name"
-      "img-cuisine hours"
-      "address address"
-      "details-map-container details-map-container";
+      'name name'
+      'img-cuisine hours'
+      'address address'
+      'details-map-container details-map-container';
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 10px;
   }
@@ -427,7 +432,7 @@ nav h1 a {
 
 @media screen and (min-width: 1000px) {
   .inside main {
-    grid-template-areas: "restaurant reviews";
+    grid-template-areas: 'restaurant reviews';
     grid-template-columns: 1fr 2fr;
   }
 
