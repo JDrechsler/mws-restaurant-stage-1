@@ -176,7 +176,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = restaurant => {
   const li = document.createElement('li');
-
+  //todo add lazy loading like here: https://codepen.io/malchata/pen/YeMyrQ
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   /**@type {string} */
